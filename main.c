@@ -6,7 +6,7 @@
 unsigned char header[54];
 unsigned char imgin[3][512][512];
 unsigned char imgout[3][512][512];
-double dtemp[3][512][512];
+double dtemp[3][512][512]={};
 int width;
 int height;
 int byte;
@@ -18,18 +18,18 @@ int main(void)
     rgb_to_ybr(); // rgbからybrへ変換
 
     // 画像変換処理
-    printf("画像の 1:白黒 , 2:左右反転 , 3:拡大縮小 , 4:二値化 , 5:平滑化 が可能\n");
+    printf("画像の 1:左右反転 , 2:モザイク化 , 3:拡大縮小 , 4:二値化 , 5:平滑化 が可能\n");
     printf("処理の番号を入力してください ! ： ");
     scanf("%d", &num);
     switch (num)
     {
     case 1:
-        printf("白黒画像が作成されます");
-        black_whtite();
+        printf("左右反転画像が作成されます\n");
+        inversion(); 
         break;
     case 2:
-        printf("左右反転画像が作成されます\n");
-        inversion(); // 未処理
+        printf("白黒画像が作成されます");
+        pixelization();
         break;
     case 3:
         printf("拡大縮小画像が作成されます\n");

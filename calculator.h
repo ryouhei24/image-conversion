@@ -6,8 +6,8 @@
 int cal_value(int lsb_index, int bytes);
 void get_data(void);
 void rgb_to_ybr(void);
-void black_whtite(void); // 白黒
 void inversion(void);     // 左右反転
+void pixelization(void); //モザイク化 
 void zoom(void);         // 拡大縮小
 void binarization(void); // 二値化
 void smoothing(void);    // 平滑化
