@@ -8,7 +8,7 @@ CFLAGS = -Wall -g
 TARGET = image
 
 # ソースファイル
-SRCS = main.c cal_value.c get_data.c rgb_to_ybr.c black_whtite.c inversion.c zoom.c binarization.c smoothing.c ybr_to_rgb.c put_data.c
+SRCS = main.c cal_value.c get_data.c rgb_to_ybr.c inversion.c pixelization.c zoom.c binarization.c smoothing.c ybr_to_rgb.c put_data.c
 
 # オブジェクトファイル
 OBJS = $(SRCS:.c=.o)
